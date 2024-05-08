@@ -3,6 +3,15 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name="ft_package"
-version="0.0.1"
-description="A sample test package"
+name = "ft_package"
+version = "0.0.1"
+authors = [
+	{name="Paco Rocha", email="frocha@f-rocha.com" },
+]
+description = "A sample test package"
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/pacorocha/python_datascience/"
