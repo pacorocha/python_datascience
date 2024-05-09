@@ -1,0 +1,7 @@
+To generate setup file, use this command:
+python setup.py sdist bdist_wheel
+
+To install use one of the following commands:
+
+sudo pip install ./dist/ft_package-0.0.1.tar.gz
+sudo pip install ./dist/ft_package-0.0.1-py3-none-any.wh
