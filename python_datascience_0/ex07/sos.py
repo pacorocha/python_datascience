@@ -15,7 +15,7 @@ def main(argv):
 
 
 def check_string(string):
-    return all(c.isalnum() or c.isspace() for c in string)
+    return all(c.isalnum() for c in string)
 
 
 NESTED_MORSE = {

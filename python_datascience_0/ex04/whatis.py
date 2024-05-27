@@ -1,13 +1,16 @@
 import sys
 
 try:
-    assert len(sys.argv) == 2, "AssertionError: more than one argument is provided"
+    assert len(sys.argv) != 3, "AssertionError: more than one argument is provided"
 except AssertionError as msg:
     print(msg)
     sys.exit(1)
 
 try:
     n = int(sys.argv[1])
+except IndexError:
+    print("")
+    sys.exit(1)
 except ValueError:
     print("AssertionError: argument is not an integer")
     sys.exit(1)

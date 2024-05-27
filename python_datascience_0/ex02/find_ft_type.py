@@ -9,7 +9,7 @@ def all_thing_is_obj(object: any) -> int:
         case dict():
             print("Dict: ", type(object))
         case str():
-            print(object, "is in the kitchen : ", type(object))
+            print(object, "is in the kitchen :", type(object))
         case int():
             print("Type not found")
     return(42)

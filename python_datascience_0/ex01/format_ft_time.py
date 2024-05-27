@@ -5,7 +5,7 @@ seconds = "{:,.4f}".format(now.timestamp())
 scientific_notation = "{:e}".format(now.timestamp())
 
 print(
-    "Seconds since January 1, 1970: ",
+    "Seconds since January 1, 1970:",
     seconds,
     "or",
     scientific_notation,

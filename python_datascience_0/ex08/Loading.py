@@ -2,7 +2,7 @@ def ft_tqdm(lst: range) -> None:
     total = len(lst)
     for i, item in enumerate(lst):
         progress = (i + 1) / total * 100
-        bar_width = 132
+        bar_width = 142
         bar_fill = int(progress / 100 * bar_width)
         arrow = '=' * bar_fill
         bar_size = ' ' * (bar_width - bar_fill)

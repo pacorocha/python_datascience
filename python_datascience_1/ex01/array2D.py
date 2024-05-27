@@ -14,7 +14,7 @@ def slice_me(family: list, start: int, end: int) -> list:
     Returns:
     list: The sliced portion of the list.
     """
-    if not isinstance(family, list):
+    if isinstance(family, list) is False:
         raise TypeError("family must be a list.")
 
     if not family:
@@ -27,12 +27,10 @@ def slice_me(family: list, start: int, end: int) -> list:
     if not all(len(member) == first_len for member in family):
         raise ValueError("Not all lists in family have the same size.")
 
-    shape = [len(family), first_len]
-    print("My shape is: ", shape)
+    print("My shape is: ", np.array(family).shape)
 
     new_family = family[start:end]
 
-    new_shape = [len(new_family), len(np.array(family[0])) if family else 0]
-    print("My new shape is: ", new_shape)
+    print("My new shape is: ", np.array(new_family).shape)
 
     return new_family

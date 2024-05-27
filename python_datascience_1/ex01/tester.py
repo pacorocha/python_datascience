@@ -4,7 +4,7 @@ from array2D import slice_me
 def main():
     family = [
         [1.80, 78.4],
-        ["asf", "asdf"],
+        [2.15, 102.7],
         [2.10, 98.5],
         [1.88, 75.2]
     ]
