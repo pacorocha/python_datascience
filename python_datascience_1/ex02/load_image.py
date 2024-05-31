@@ -16,7 +16,8 @@ def ft_load(path: str) -> np.ndarray:
         path (str): The file path to the image.
 
     Returns:
-        np.ndarray: The image data as a NumPy array.
+        np.ndarray: The image data as a NumPy array formatted for the required
+        output.
 
     Raises:
         Exception: If there is an error in loading the image, the exception is

@@ -62,17 +62,21 @@ def main():
 
     new_img = zoom(original_img)
     new_img_array = ft_load(new_img)
+    rotated_img = np.array([
+            [new_img_array[j][i]
+                for j in range(len(new_img_array))]
+            for i in range(len(new_img_array[0]))
+        ])
 
-    new_shape = f"{new_img.width}, {new_img.height}, {len(new_img.getbands())}"
-    print(f"The shape after slicing: ({new_shape}) or {new_img_array.shape}")
+    print(f"The shape after Transpose: {rotated_img.shape}")
 
-    fst_row_els = new_img_array[0, :3]
-    last_row_els = new_img_array[-1, -3:]
+    fst_row_els = rotated_img[0]
+    last_row_els = rotated_img[-1]
 
-    print(f"[[[{fst_row_els[0]}]\n  [{fst_row_els[1]}]\n  [{fst_row_els[2]}]\n  ...")
-    print(f"  [{last_row_els[0]}]\n  [{last_row_els[1]}]\n  [{last_row_els[2]}]]]")
+    print(f"[{fst_row_els}\n  ...")
+    print(f" [{last_row_els}")
 
-    display_image(new_img)
+    display_image(rotated_img)
 
 
 if __name__ == "__main__":
