@@ -45,7 +45,10 @@ def ft_blue(array) -> array:
 
 def ft_grey(array) -> array:
     grey_array = array.copy()
-    grey = (grey_array[:, :, 0] / 3 + grey_array[:, :, 1] / 3 + grey_array[:, :, 2] / 3).astype(np.uint8)
+    grey_value1 = grey_array[:, :, 0] / 3
+    grey_value2 = grey_array[:, :, 1] / 3
+    grey_value3 = grey_array[:, :, 2] / 3
+    grey = (grey_value1 + grey_value2 + grey_value3).astype(np.uint8)
     grey_array[:, :, 0] = grey
     grey_array[:, :, 1] = grey
     grey_array[:, :, 2] = grey

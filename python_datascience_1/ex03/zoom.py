@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import numpy as np
 
 from PIL import Image
 from load_image import ft_load
@@ -66,11 +65,11 @@ def main():
     new_shape = f"{new_img.width}, {new_img.height}, {len(new_img.getbands())}"
     print(f"The shape after slicing: ({new_shape}) or {new_img_array.shape}")
 
-    fst_row_els = new_img_array[0, :3]
-    last_row_els = new_img_array[-1, -3:]
+    first_els = new_img_array[0, :3]
+    last_els = new_img_array[-1, -3:]
 
-    print(f"[[[{fst_row_els[0]}]\n  [{fst_row_els[1]}]\n  [{fst_row_els[2]}]\n  ...")
-    print(f"  [{last_row_els[0]}]\n  [{last_row_els[1]}]\n  [{last_row_els[2]}]]]")
+    print(f"[[[{first_els[0]}]\n  [{first_els[1]}]\n  [{first_els[2]}]\n  ...")
+    print(f"  [{last_els[0]}]\n  [{last_els[1]}]\n  [{last_els[2]}]]]")
 
     display_image(new_img)
 
