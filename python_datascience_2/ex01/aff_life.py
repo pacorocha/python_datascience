@@ -49,8 +49,8 @@ def aff_life(data, country):
 
 
 def main(argv):
-    df = load(argv[1])
-    country = argv[2]
+    df = load("life_expectancy_years.csv")
+    country = "France"
 
     aff_life(df, country)
 

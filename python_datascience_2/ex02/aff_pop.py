@@ -38,7 +38,7 @@ def aff_pop(data, country, start_year=1800, end_year=2050):
             return float(val[:-1]) * 1e6
         return float(val)
 
-    country_data = country_data.applymap(convert_population)
+    country_data = country_data.map(convert_population)
 
     country_data.index = country_data.index.astype(int)
 
@@ -84,9 +84,9 @@ def plot_populations(data, country, country2):
 
 
 def main(argv):
-    df = load(argv[1])
-    country = argv[2]
-    country2 = argv[3]
+    df = load("population_total.csv")
+    country = "Brazil"
+    country2 = "Mexico"
 
     plot_populations(df, country, country2)
 

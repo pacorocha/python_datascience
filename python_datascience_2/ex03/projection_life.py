@@ -9,8 +9,8 @@ def main(argv):
         if len(argv) < 2:
             raise ValueError("A year must be specified as an argument.")
 
-        file1 = "./income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
-        file2 = "./life_expectancy_years.csv"
+        file1 = "income_per_person_gdppercapita_ppp_inflation_adjusted.csv"
+        file2 = "life_expectancy_years.csv"
         year = argv[1]
 
         df_file1 = load(file1)
