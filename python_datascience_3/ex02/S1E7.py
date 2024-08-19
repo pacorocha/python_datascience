@@ -1,5 +1,6 @@
 from S1E9 import Character
 
+
 class Baratheon(Character):
     """
     A class to represent a member of the Baratheon family.
@@ -9,13 +10,16 @@ class Baratheon(Character):
     first_name : str
         The first name of the Baratheon family member.
     is_alive : bool
-        A flag indicating whether the Baratheon family member is alive (default is True).
+        A flag indicating whether the Baratheon family member is alive (default
+        is True).
     family_name : str
         The family name, which is "Baratheon" for all instances of this class.
     eyes : str
-        The eye color of the Baratheon family member, which is "brown" for all instances of this class.
+        The eye color of the Baratheon family member, which is "brown" for all
+        instances of this class.
     hairs : str
-        The hair color of the Baratheon family member, which is "dark" for all instances of this class.
+        The hair color of the Baratheon family member, which is "dark" for all
+        instances of this class.
     """
     def __init__(self, first_name, is_alive=True):
         """
@@ -26,7 +30,8 @@ class Baratheon(Character):
         first_name : str
             The first name of the Baratheon family member.
         is_alive : bool, optional
-            A flag indicating whether the Baratheon family member is alive (default is True).
+            A flag indicating whether the Baratheon family member is alive
+            (default is True).
         """
         self.first_name = first_name
         self.is_alive = is_alive
@@ -54,7 +59,8 @@ class Baratheon(Character):
         str
             An unambiguous string representation of the Baratheon object.
         """
-        return str(f'Vector: (\'{self.family_name}\', \'{self.eyes}\', \'{self.hairs})\'')
+        family = f'\'{self.family_name}\', \'{self.eyes}\', \'{self.hairs}'
+        return str(f'Vector: ({family})\'')
 
     def die(self):
         """***METHOD***
@@ -62,6 +68,7 @@ class Baratheon(Character):
         """
         if self.is_alive is True:
             self.is_alive = False
+
 
 class Lannister(Character):
     """
@@ -72,13 +79,16 @@ class Lannister(Character):
     first_name : str
         The first name of the Lannister family member.
     is_alive : bool
-        A flag indicating whether the Lannister family member is alive (default is True).
+        A flag indicating whether the Lannister family member is alive (default
+        is True).
     family_name : str
         The family name, which is "Lannister" for all instances of this class.
     eyes : str
-        The eye color of the Lannister family member, which is "blue" for all instances of this class.
+        The eye color of the Lannister family member, which is "blue" for all
+        instances of this class.
     hairs : str
-        The hair color of the Lannister family member, which is "light" for all instances of this class.
+        The hair color of the Lannister family member, which is "light" for all
+        instances of this class.
     """
     def __init__(self, first_name, is_alive=True):
         """
@@ -89,13 +99,15 @@ class Lannister(Character):
         first_name : str
             The first name of the Lannister family member.
         is_alive : bool, optional
-            A flag indicating whether the Lannister family member is alive (default is True).
+            A flag indicating whether the Lannister family member is alive
+            (default is True).
         """
         self.first_name = first_name
         self.is_alive = is_alive
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
+
     def __str__(self):
         """
         Returns a string representation of the Lannister object.
@@ -116,13 +128,16 @@ class Lannister(Character):
         str
             An unambiguous string representation of the Lannister object.
         """
-        return str(f'Vector: (\'{self.family_name}\', \'{self.eyes}\', \'{self.hairs})\'')
+        family = f'\'{self.family_name}\', \'{self.eyes}\', \'{self.hairs}'
+        return str(f'Vector: ({family})\'')
+
     def die(self):
         """***METHOD***
     Sets the `is_alive` attribute to False if the character is currently alive.
         """
         if self.is_alive is True:
             self.is_alive = False
+
     @classmethod
     def create_lannister(cls, first_name, is_alive):
         """
@@ -133,7 +148,8 @@ class Lannister(Character):
         first_name : str
             The first name of the Lannister family member.
         is_alive : bool, optional
-            A flag indicating whether the Lannister family member is alive (default is True).
+            A flag indicating whether the Lannister family member is alive
+            (default is True).
 
         Returns:
         --------
