@@ -34,7 +34,7 @@ def ft_load(path: str) -> np.ndarray:
             first_row_elements = img_array[0, :3]
             last_row_elements = img_array[-1, -3:]
 
-            print(f"[{ first_row_elements }\n    ...\n{last_row_elements}]")
+            print(f"[{first_row_elements}\n    ...\n{last_row_elements}]")
 
             return img_array
 
