@@ -61,7 +61,7 @@ def mean(args_sum: float, args_len: int) -> float:
         return None
 
 
-def median(args_list: List[float]) -> float:
+def median(args_list: List[float]) -> int | float:
     """
     Calculates and returns the median of the provided values.
 
@@ -69,7 +69,7 @@ def median(args_list: List[float]) -> float:
         args_list (List[float]): A sorted list of numeric values.
 
     Returns:
-        float: The median value.
+        int or float: The median value.
 
     Raises:
         IndexError: If the list is empty.
