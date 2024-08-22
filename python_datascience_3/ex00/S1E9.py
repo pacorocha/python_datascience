@@ -13,11 +13,16 @@ class Character(ABC):
         die: Abstract method to be implemented by subclasses, defining the
         character's behavior upon death.
     """
-    def __init__(self):
+    def __init__(self, first_name, is_alive=True):
         """***CONSTRUCTOR***
         Initializes a new character.
+
+        Args:
+            first_name (str): The first name of the character.
+            is_alive (bool): A boolean flag indicating whether the character is alive.
         """
-        pass
+        self.first_name = first_name
+        self.is_alive = True
 
     @abstractmethod
     def die(self):
@@ -27,7 +32,6 @@ class Character(ABC):
     This method should contain the logic that occurs when the character dies.
         """
         pass
-
 
 class Stark(Character):
     """***CLASS***
@@ -56,8 +60,7 @@ Methods:
             is_alive (bool, optional): A boolean flag indicating whether the
             character is alive. Defaults to True.
         """
-        self.first_name = first_name
-        self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
 
     def die(self):
         """***METHOD***

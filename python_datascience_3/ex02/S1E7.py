@@ -33,8 +33,7 @@ class Baratheon(Character):
             A flag indicating whether the Baratheon family member is alive
             (default is True).
         """
-        self.first_name = first_name
-        self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
         self.family_name = "Baratheon"
         self.eyes = "brown"
         self.hairs = "dark"
@@ -59,8 +58,8 @@ class Baratheon(Character):
         str
             An unambiguous string representation of the Baratheon object.
         """
-        family = f'\'{self.family_name}\', \'{self.eyes}\', \'{self.hairs}'
-        return str(f'Vector: ({family})\'')
+        vector_str = f'{self.family_name}\', \'{self.eyes}\', \'{self.hairs}'
+        return str(f'Vector: ({vector_str})')
 
     def die(self):
         """***METHOD***
@@ -102,8 +101,7 @@ class Lannister(Character):
             A flag indicating whether the Lannister family member is alive
             (default is True).
         """
-        self.first_name = first_name
-        self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
@@ -128,8 +126,8 @@ class Lannister(Character):
         str
             An unambiguous string representation of the Lannister object.
         """
-        family = f'\'{self.family_name}\', \'{self.eyes}\', \'{self.hairs}'
-        return str(f'Vector: ({family})\'')
+        vector_str = f'{self.family_name}\', \'{self.eyes}\', \'{self.hairs}'
+        return str(f'Vector: ({vector_str})')
 
     def die(self):
         """***METHOD***

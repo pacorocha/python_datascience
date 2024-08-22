@@ -33,8 +33,7 @@ class Baratheon(Character):
             A flag indicating whether the Baratheon family member is alive
             (default is True).
         """
-        self.first_name = first_name
-        self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
         self.family_name = "Baratheon"
         self.eyes = "brown"
         self.hairs = "dark"
@@ -102,8 +101,7 @@ class Lannister(Character):
             A flag indicating whether the Lannister family member is alive
             (default is True).
         """
-        self.first_name = first_name
-        self.is_alive = is_alive
+        super().__init__(first_name, is_alive)
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
